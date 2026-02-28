@@ -1,0 +1,24 @@
+{
+  "id": "snap-doctor",
+  "name": "SnapDoctor",
+  "version": "1.0.0",
+  "description": "OpenClaw配置医生 - 自动备份/检测/恢复配置",
+  "author": "Xiaodao + H",
+  "runtime": "agent",
+  "tools": ["snapDoctorBackup", "snapDoctorRestore", "snapDoctorList"],
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "autoBackup": {
+        "type": "boolean",
+        "default": true,
+        "description": "Auto backup before config changes"
+      },
+      "healthCheckInterval": {
+        "type": "number", 
+        "default": 60000,
+        "description": "Health check interval in ms"
+      }
+    }
+  }
+}
